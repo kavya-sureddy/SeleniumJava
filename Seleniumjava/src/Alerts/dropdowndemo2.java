@@ -13,6 +13,10 @@ public class dropdowndemo2 {
 		
 		WebDriver driver= new ChromeDriver();
 		
+//Implicit Wait is a global wait in Selenium that tells the WebDriver to wait for a fixed time while searching for any web element before throwing NoSuchElementException.
+
+//It is applied to all findElement() calls in the script.
+		
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 		
 		try {

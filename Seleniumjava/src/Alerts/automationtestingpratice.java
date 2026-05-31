@@ -90,19 +90,17 @@ public class automationtestingpratice {
 	driver.findElement(By.id("pwd")).sendKeys("test");
 	WebElement Loginbtn=driver.findElement(By.xpath("//input[@value='Login']"));
 	Loginbtn.click();
+	//Explicit Wait is a condition-based wait used to pause execution until a specific condition is met for a particular element.
 	WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
  wait.until(ExpectedConditions.urlToBe("https://trytestingthis.netlify.app/login.html?uname=test&pwd=test"));
-
+// wait.until(ExpectedConditions.elementToBeClickable(By.id("login")));
+// wait.until(ExpectedConditions.urlContains("login"));
+// wait.until(ExpectedConditions.titleContains("Dashboard"));
 	System.out.println("Current URL: " + driver.getCurrentUrl());
 	WebElement successMsg = driver.findElement(By.tagName("h2"));
 	System.out.println(successMsg.getText());
 	driver.findElement(By.linkText("here")).click();
 	System.out.println("Current page Title is:" +driver.getCurrentUrl());
 	driver.quit();
-	
-	
-	
-	 
-
 }
 }
