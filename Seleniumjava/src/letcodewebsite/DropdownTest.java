@@ -45,6 +45,7 @@ import java.util.List;
         // Wrap WebElement with Select class — Select gives us dropdown methods
         // Without Select, we can't use selectByVisibleText, selectByIndex etc.
         Select select = new Select(fruitDropdown);
+        
  
         // selectByVisibleText() = selects option that matches the visible text "Apple"
         select.selectByVisibleText("Apple");
